@@ -25,7 +25,7 @@ This is a **Minimal Viable Product (MVP)** for an **Ed-Tech Platform**. The syst
 
 ---
 
-## Features 🚀
+## Features
 
 ### 1. **Project Assignment Module**
    - Assign projects to candidates.
@@ -146,7 +146,7 @@ http://localhost:6002/api
 
 ---
 
-## Screenshots 📸
+## Screenshots
 
 1. **Project Assignment Interface**  
    ![Project Assignment](link-to-screenshot)
@@ -159,14 +159,14 @@ http://localhost:6002/api
 
 ---
 
-## Deployment Links 🌐
+## Deployment Links
 
 - **Frontend**: [Deployed Link Here](https://your-frontend-link.com)  
 - **Backend**: [Backend API](https://your-backend-link.com/api)
 
 ---
 
-## Future Improvements 💡
+## Future Improvements
 - Role-Based Access Control (Admin, Mentor, Candidate).  
 - Real-time updates with WebSockets.  
 - Advanced analytics dashboard.  
