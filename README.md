@@ -161,8 +161,8 @@ http://localhost:6002/api
 
 ## Deployment Links
 
-- **Frontend**: [Deployed Link Here](https://your-frontend-link.com)  
-- **Backend**: [Backend API](https://your-backend-link.com/api)
+- **Frontend**: [Deployed Link Here](https://assignment-management-tool.vercel.app/)  
+- **Backend**: [Backend API](https://assignment-management-tool.onrender.com/api)
 
 ---
 
