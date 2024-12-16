@@ -6,7 +6,7 @@ import {
 } from "../services/api";
 import { getCandidates, getProjects } from "../services/api";
 import { toast } from "react-toastify";
-import _ from "lodash"; // Import lodash for debounce
+import _ from "lodash";
 
 const Assignments = () => {
   const [assignments, setAssignments] = useState([]);
@@ -50,8 +50,6 @@ const Assignments = () => {
     }
   };
 
-  // Debounced Progress Update Function
-  // Debounce ensures the update happens only after user stops sliding for 300ms
   const debouncedUpdateProgress = useCallback(
     _.debounce(async (id, progress) => {
       try {
@@ -66,7 +64,6 @@ const Assignments = () => {
   );
 
   const handleProgressChange = (id, progress) => {
-    // Update immediately in UI and debounce API call
     setAssignments((prevAssignments) =>
       prevAssignments.map((assignment) =>
         assignment._id === id ? { ...assignment, progress } : assignment

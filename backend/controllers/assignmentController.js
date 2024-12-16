@@ -52,7 +52,7 @@ const updateProgress = async (req, res) => {
       return res.status(400).json({ error: "Progress must be between 0 and 100." });
     }
 
-    const score = progress * 10; // Score logic
+    const score = progress * 10;
 
     const assignment = await Assignment.findByIdAndUpdate(
       id,
