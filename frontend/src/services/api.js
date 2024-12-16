@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:6002/api";
+// const API_URL = "http://localhost:6002/api";
+const API_URL = "https://assignment-management-tool.onrender.com/api";
 
 export const getCandidates = () => axios.get(`${API_URL}/candidates`);
 export const createCandidate = (candidate) =>
