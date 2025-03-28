@@ -1,14 +1,17 @@
-const express = require("express");
+import express from "express";
 const router = express.Router();
-const {
+import { auth, authorize } from "../middleware/auth.js";
+import {
   getAllAssignments,
   assignProject,
-  updateProgress,
-} = require("../controllers/assignmentController");
+  updateAssignmentProgress,
+  updateAssignmentStatus,
+} from "../controllers/assignmentController.js";
 
 // Routes
-router.get("/", getAllAssignments);
-router.post("/", assignProject);
-router.put("/:id/progress", updateProgress);
+router.get("/", auth, getAllAssignments);
+router.post("/", auth, authorize(["admin", "manager"]), assignProject);
+router.put("/:id/progress", auth, authorize(["candidate"]), updateAssignmentProgress);
+router.put("/:id/status", auth, authorize(["candidate"]), updateAssignmentStatus);
 
-module.exports = router;
+export default router;

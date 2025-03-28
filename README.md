@@ -166,6 +166,39 @@ http://localhost:6002/api
 
 ---
 
+## 🛡️ CSRF Protection & Security Testing
+
+This project includes robust CSRF (Cross-Site Request Forgery) protection for secure data operations.
+
+### ✅ CSRF Implementation
+
+- **Backend**:
+  - Integrated `csurf` middleware in Express.
+  - CSRF token served via a `/api/csrf-token` endpoint.
+  - CSRF protection applied after login (`/api/auth`) to ensure session is active.
+
+- **Frontend**:
+  - React app fetches the CSRF token on load.
+  - Axios is configured to automatically send the CSRF token in all requests.
+  - Token is stored in memory using `axios.defaults.headers.common["X-CSRF-Token"]`.
+
+### 🧪 Security Testing Performed
+
+| Test Case                          | Result           |
+|-----------------------------------|------------------|
+| Missing CSRF token                | 403 Forbidden ✅ |
+| Invalid/forged CSRF token         | 403 Forbidden ✅ |
+| Valid CSRF token with action      | 200 OK ✅         |
+| Frontend shows alert on CSRF fail | ✅ Shown correctly |
+
+### 📝 Report Includes:
+
+- Step-by-step testing of valid and invalid CSRF requests.
+- Screenshots of browser console and alert popups.
+- Explanation of how CSRF protection improves security.
+
+---
+
 ## Future Improvements
 - Role-Based Access Control (Admin, Mentor, Candidate).  
 - Real-time updates with WebSockets.  

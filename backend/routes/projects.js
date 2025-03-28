@@ -1,9 +1,10 @@
-const express = require("express");
+import express from "express";
 const router = express.Router();
-const { getAllProjects, addProject } = require("../controllers/projectController");
+import { auth, authorize } from "../middleware/auth.js";
+import { getAllProjects, addProject } from "../controllers/projectController.js";
 
 // Routes
-router.get("/", getAllProjects);
-router.post("/", addProject);
+router.get("/", auth, authorize(["admin", "manager"]), getAllProjects);
+router.post("/", auth, authorize(["admin", "manager"]), addProject);
 
-module.exports = router;
+export default router;

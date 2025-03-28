@@ -1,4 +1,6 @@
-const Candidate = require("../models/Candidate");
+import Candidate from "../models/Candidate.js";
+import bcrypt from "bcryptjs";
+import User from "../models/User.js";
 
 // Get all candidates
 const getAllCandidates = async (req, res) => {
@@ -13,12 +15,20 @@ const getAllCandidates = async (req, res) => {
 // Add a new candidate
 const addCandidate = async (req, res) => {
   try {
-    const candidate = new Candidate(req.body);
+    const { name, email, skills } = req.body;
+
+    // Check for required fields
+    if (!name || !email || !skills) {
+      return res.status(400).json({ msg: "All fields are required." });
+    }
+
+    const candidate = new Candidate({ name, email, skills });
     await candidate.save();
+
     res.status(201).json(candidate);
   } catch (error) {
-    res.status(400).json({ error: error.message });
+    res.status(500).json({ error: error.message });
   }
 };
 
-module.exports = { getAllCandidates, addCandidate };
+export { getAllCandidates, addCandidate };

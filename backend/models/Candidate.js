@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+import mongoose from 'mongoose';
 
 const candidateSchema = mongoose.Schema({
     name: { type: String, required: true },
@@ -6,4 +6,4 @@ const candidateSchema = mongoose.Schema({
     skills: [String]
 });
 
-module.exports = mongoose.model("Candidate", candidateSchema);
+export default mongoose.model("Candidate", candidateSchema);

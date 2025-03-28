@@ -1,9 +1,9 @@
-const express = require("express");
+import express from "express";
 const router = express.Router();
-const { getAllCandidates, addCandidate } = require("../controllers/candidateController");
+import { getAllCandidates, addCandidate } from "../controllers/candidateController.js";
 
 // Routes
 router.get("/", getAllCandidates);
 router.post("/", addCandidate);
 
-module.exports = router;
+export default router;
