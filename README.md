@@ -149,13 +149,11 @@ http://localhost:6002/api
 ## Screenshots
 
 1. **Project Assignment Interface**  
-   ![Project Assignment](link-to-screenshot)
+   ![Project Assignment](./Project Assignment.png)
 
 2. **Progress Tracking**  
-   ![Progress Tracking](link-to-screenshot)
+   ![Progress Tracking](./Progress Tracking.png)
 
-3. **API Testing with Postman**  
-   ![Postman API](link-to-screenshot)
 
 ---
 
