@@ -149,10 +149,10 @@ http://localhost:6002/api
 ## Screenshots
 
 1. **Project Assignment Interface**  
-   ![Project Assignment](./Project Assignment.png)
+   ![Project Assignment](https://github.com/nishant0207/assignment-management-tool/blob/main/frontend/public/Project%20Assignment.png)
 
 2. **Progress Tracking**  
-   ![Progress Tracking](./Progress Tracking.png)
+   ![Progress Tracking](https://github.com/nishant0207/assignment-management-tool/blob/main/frontend/public/Progress%20Tracking.png)
 
 
 ---
