@@ -195,6 +195,10 @@ This project includes robust CSRF (Cross-Site Request Forgery) protection for se
 - Screenshots of browser console and alert popups.
 - Explanation of how CSRF protection improves security.
 
+**Progress Tracking**  
+   ![Report](https://github.com/nishant0207/assignment-management-tool/blob/main/frontend/public/CSRF%20Report.pdf)
+
+
 ---
 
 ## Future Improvements
